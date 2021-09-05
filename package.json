@@ -1,0 +1,25 @@
+{
+  "name": "andro-rtc-chat",
+  "version": "1.0.0",
+  "description": "Backend of android-rtc-chat",
+  "main": "index.js",
+  "scripts": {
+    "start:debug": "node index.js",    
+    "start:dev-linux": "nodemon index.js"    
+  },
+  "keywords": [
+    "andro-rtc-chat"
+  ],
+  "author": "imran ali",
+  "license": "ISC",
+  "dependencies": {    
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",      
+    "nodemon": "^2.0.4",
+    "package.json": "^2.0.1",
+    "socket.io": "^2.3.0"    
+  }
+}
