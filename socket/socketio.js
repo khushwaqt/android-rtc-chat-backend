@@ -20,14 +20,16 @@ module.exports = function (server) {
             io.emit('on_connection_params', params)
         });
 
-        socket.on('offer', function (offer) {
+        socket.on('offer', function (offer, userId) {
+            console.log(`Offer recieved from ${userId}`)
             console.log(`Broadcasting offer...`)
-            io.emit('on_offer', offer)
+            io.emit('on_offer', offer, userId)
         });
 
-        socket.on('ice', function (icecandidates) {
+        socket.on('ice', function (icecandidates, userId) {
+            console.log(`Ice recieved from${userId}`)
             console.log(`Broadcasting ICE...`)
-            io.emit('on_ice', icecandidates)
+            io.emit('on_ice', icecandidates, userId)
         });
 
     });
